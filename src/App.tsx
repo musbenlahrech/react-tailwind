@@ -1,6 +1,8 @@
 import React, { ReactElement, useState } from 'react'
 import logo from './logo.svg'
 
+import FirstPlot from './components/plots/FirstPlot'
+
 function App(): ReactElement {
   const [count, setCount] = useState(0)
 
@@ -19,6 +21,7 @@ function App(): ReactElement {
             count is: {count}
           </button>
         </p>
+        <FirstPlot/>
         <p className="pb-3 pt-3">
           Edit{' '}
           <code className="border border-1 pl-1 pr-1 pb-0.5 pt-0.5 rounded border-purple-400 font-mono text-sm bg-purple-100 text-purple-900">
