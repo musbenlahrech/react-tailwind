@@ -1,5 +1,6 @@
 import React, { ReactElement, useState } from 'react'
 import logo from './logo.svg'
+import { Link } from "react-router-dom";
 
 import FirstPlot from './components/plots/FirstPlot'
 
@@ -21,7 +22,7 @@ function App(): ReactElement {
             count is: {count}
           </button>
         </p>
-        <FirstPlot/>
+        <FirstPlot />
         <p className="pb-3 pt-3">
           Edit{' '}
           <code className="border border-1 pl-1 pr-1 pb-0.5 pt-0.5 rounded border-purple-400 font-mono text-sm bg-purple-100 text-purple-900">
@@ -58,6 +59,15 @@ function App(): ReactElement {
           </a>
         </p>
       </header>
+      <nav
+        style={{
+          borderBottom: "solid 1px",
+          paddingBottom: "1rem",
+        }}
+      >
+        <Link to="/invoices">Invoices</Link> |{" "}
+        <Link to="/expenses">Expenses</Link>
+      </nav>
     </div>
   )
 }
